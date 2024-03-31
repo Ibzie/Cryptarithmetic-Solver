@@ -1,0 +1,44 @@
+Algorithm:
+The algorithm recursively tries different digit assignments to letters until a
+valid solution is found or all possibilities are exhausted
+
+Input Processing:
+The input consists of the operands and the result of the cryptarithmetic puzzle.
+Each letter in the puzzle is considered a variable. The input processing extracts the
+operands and the result from the input file or provides them directly in the code.
+
+Initialization:
+The algorithm initializes the letter_used set to store all unique letters
+used in the puzzle. Each letter is appended with "0" to represent its initial digit value.
+Permutation and Backtracking: The algorithm uses the heap permutation algorithm to generate
+all possible permutations of digits from 0 to 9. It then iterates through each permutation,
+updating the letter_used set with the current digit permutation. After updating, it checks
+if the current permutation satisfies the puzzle equation using backtracking.
+
+Solution Validation:
+The is_valid_assignment function validates whether the current
+permutation satisfies the puzzle equation. It translates the puzzle into numeric
+expressions using the current permutation of digits and checks if the equation holds true.
+
+Solution Display:
+If a valid solution is found, the algorithm displays the solution by
+replacing letters with their corresponding digits. Otherwise, it indicates that no solution
+exists.
+
+
+Input:
+The input for the cryptarithmetic puzzle solver consists of the operands and
+the result of the puzzle. These are provided either through an input file or
+directly in the code.
+
+For example:
+operand = ["SEND", "MORE"]
+result = "MONEY"
+
+
+Working:
+The cryptarithmetic puzzle solver works by exhaustively searching for all possible digit
+permutations and validating each permutation against the puzzle equation. The solver
+iterates through permutations using backtracking until a valid solution is found or all
+permutations are exhausted. It then displays the solution along with the time taken for
+execution.
